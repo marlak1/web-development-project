@@ -11,7 +11,7 @@ Theme 1 – Portfolio
 In this theme, you can create your own personal portfolio website that showcases your work, experience and overall development, something that you can use professionally in future.
 
 Constraints
-
+       
 
 For the above themes there are some creative/technical constraints to consider:
 
