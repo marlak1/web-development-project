@@ -1,319 +1,495 @@
+/* Set scroll behavior, height, box-sizing, and overflow properties for the HTML and body elements */
 html, body {
-  scroll-behavior: smooth;
-  min-height: 100vh;
-  box-sizing: border-box;
-  overflow-x: hidden;
+  scroll-behavior: smooth; /* Smooth scrolling behavior */
+  min-height: 100vh; /* Minimum height of the viewport */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  overflow-x: hidden; /* Hide horizontal scrollbars */
 }
 
+/* Reset padding and margin for the body element */
 body {
   padding: 0;
   margin: 0;
 }
 
+/* Style the main section */
 .main {
-  min-height: calc(100vh - 150px); /* Adjust this value based on the actual footer height */
-  width: 600px;
-  padding-top: 150px;
-  padding-left: 500px;
-  text-align: center;
+  min-height: calc(100vh - 150px); /* Minimum height minus the footer height */
+  width: 600px; /* Width of the main section */
+  padding-top: 150px; /* Top padding of the main section */
+  padding-left: 500px; /* Left padding of the main section */
+  text-align: center; /* Center align the content */
 }
 
+/* Style the title section */
 .title {
-  float: left;
-  width: 200px;
-  display: flex;
-  align-items: center;
+  float: left; /* Float the title section to the left */
+  width: 200px; /* Width of the title section */
+  display: flex; /* Use flexbox for aligning the content */
+  align-items: center; /* Center align the content vertically */
 }
 
+/* Style the title image */
 #title-image {
-  position: fixed;
-  width: 80px;
-  padding: 100px;
-  padding-top: 300px;
-  padding-bottom: 0;
-  padding-left: 70px;
-  z-index: 2;
+  position: fixed; /* Fix the position of the title image */
+  width: 80px; /* Width of the title image */
+  padding: 100px; /* Padding around the title image */
+  padding-top: 300px; /* Additional padding at the top */
+  padding-bottom: 0; /* Remove bottom padding */
+  padding-left: 70px; /* Left padding of the title image */
+  z-index: 2; /* Higher stacking order */
 }
 
+/* Style the navigation bar */
 .navBar {
-  position: fixed;
-  float: left;
-  margin-top: 250px;
-  margin-left: 70px;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 235px;
-  z-index: 1;
-  background-color: white;
+  position: fixed; /* Fix the position of the navigation bar */
+  float: left; /* Float the navigation bar to the left */
+  margin-top: 250px; /* Margin from the top */
+  margin-left: 70px; /* Margin from the left */
+  display: flex; /* Use flexbox for aligning the content */
+  flex-direction: column; /* Arrange the links vertically */
+  height: 100%; /* Height of the navigation bar */
+  width: 235px; /* Width of the navigation bar */
+  z-index: 1; /* Lower stacking order */
+  background-color: white; /* Background color of the navigation bar */
 }
 
+/* Style the navigation bar links */
 .navBar a {
-  font-size: 15px;
-  font-weight: bold;
-  font-family: monospace;
-  color: black;
-  text-decoration: none;
-  margin-bottom: 20px;
-  transition: font-size 0.2s ease;
+  font-size: 15px; /* Font size of the navigation bar links */
+  font-weight: bold; /* Font weight of the navigation bar links */
+  font-family: monospace; /* Font family of the navigation bar links */
+  color: black; /* Text color of the navigation bar links */
+  text-decoration: none; /* Remove underline from the navigation bar links */
+  margin-bottom: 20px; /* Margin at the bottom of the navigation bar links */
+  transition: font-size 0.2s ease; /* Smooth transition effect on hover */
 }
 
+/* Apply hover effect to navigation bar links */
 .navBar a:hover {
-  font-size: 17px;
+  font-size: 17px; /* Increase font size on hover */
 }
 
+/* Selects the element with the ID "big" */
 #big {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  z-index: 9999;
-  width: 500px;
-  padding: 20%;
-  transform: translate(-50%, -50%);
+  position: fixed; /* Sets the element as a fixed element */
+  top: 50%; /* Positions the element vertically at 50% from the top */
+  left: 50%; /* Positions the element horizontally at 50% from the left */
+  z-index: 9999; /* Sets the stacking order of the element */
+  width: 500px; /* Sets width to 500 pixels */
+  padding: 20%; /* Adds padding around the element */
+  transform: translate(-50%, -50%); /* Translates the element to center it */
 }
 
+/* Sets styles for the cover image */
 #cover-image {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 9998;
+  top: 0; /* Positions the element at the top */
+  left: 0; /* Positions the element at the left */
+  width: 100%; /* Sets width to 100% */
+  height: 100%; /* Sets height to 100% */
+  z-index: 9998; /* Sets the stacking order of the element */
 }
 
+/* Defines styles for the cover element */
 .cover {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 9998;
-  transition: transform 1s ease-in-out;
+  position: fixed; /* Sets the element as a fixed element */
+  top: 0; /* Positions the element at the top */
+  left: 0; /* Positions the element at the left */
+  width: 100%; /* Sets width to 100% */
+  height: 100%; /* Sets height to 100% */
+  z-index: 9998; /* Sets the stacking order of the element */
+  transition: transform 1s ease-in-out; /* Adds a transition effect */
 }
 
+/* Applies transform to move the cover element upwards */
 .cover.up {
-  transform: translateY(-100%);
+  transform: translateY(-100%); /* Translates the element vertically upwards */
 }
 
+/* Defines styles for heading elements within the .main section */
 .main h1 {
-  font-family: monospace;
-  font-size: 35px;
+  font-family: monospace; /* Sets font family */
+  font-size: 35px; /* Sets font size to 35 pixels */
 }
 
+/* Defines styles for secondary heading elements within the .main section */
 .main h2{
-  font-family: monospace;
-  margin-bottom: 65px;
+  font-family: monospace; /* Sets font family */
+  margin-bottom: 65px; /* Adds bottom margin */
 }
 
+/* Defines styles for paragraph elements within the .main section */
 .main p {
-  font-family: monospace;
-  font-size: 15px;
+  font-family: monospace; /* Sets font family */
+  font-size: 15px; /* Sets font size to 15 pixels */
 }
 
+/* Sets positioning and size properties for the profile image */
 #profile {
-  position: absolute;
-  width: 400px;
-  top: 320px;
-  left: 1150px;
+  position: absolute; /* Sets the element as an absolute positioned element */
+  width: 400px; /* Sets width to 400 pixels */
+  top: 320px; /* Positions the element from the top */
+  left: 1150px; /* Positions the element from the left */
 }
 
+/* Adds fade-in effect to elements with the "fade-in" class */
 .fade-in {
-  opacity: 0; /* start with 0 opacity */
-  animation-name: fadeIn;
-  animation-duration: 0.8s;
-  animation-fill-mode: forwards; /* keep the last keyframe state */
+  opacity: 0; /* Starts with 0 opacity */
+  animation-name: fadeIn; /* Specifies the animation to be applied */
+  animation-duration: 0.8s; /* Sets the duration of the animation */
+  animation-fill-mode: forwards; /* Keeps the last keyframe state */
 }
 
+/* Defines the keyframe animation for fade-in effect */
 @keyframes fadeIn {
   from {
-    opacity: 0; /* start with 0 opacity */
+    opacity: 0; /* Starts with 0 opacity */
   }
   to {
-    opacity: 1; /* end with 1 opacity */
+    opacity: 1; /* Ends with 1 opacity */
   }
 }
 
+/* Sets positioning and size properties for the footer image */
 #footerimg {
-  position: absolute;
-  margin-top: 100px;
-  width: 200px;
-  left: 50%;
+  position: absolute; /* Sets the element as an absolute positioned element */
+  margin-top: 100px; /* Adds top margin */
+  width: 200px; /* Sets width to 200 pixels */
+  left: 50%; /* Positions the element horizontally at 50% from the left */
 }
 
+/* Defines styles for anchor elements within the .main section */
 .main a {
-  font-size: 16px;
-  font-weight: bold;
-  font-family: monospace;
-  color: black;
-  text-decoration: none;
-  transition: font-size 0.2s ease;
+  font-size: 16px; /* Sets font size to 16 pixels */
+  font-weight: bold; /* Sets font weight to bold */
+  font-family: monospace; /* Sets font family */
+  color: black; /* Sets text color */
+  text-decoration: none; /* Removes underline */
+  transition: font-size 0.2s ease; /* Adds a transition effect */
 }
 
+/* Defines hover styles for anchor elements within the .main section */
 .main a:hover {
-  font-size: 17px;
+  font-size: 17px; /* Increases font size on hover */
 }
 
+
+/* Styles for the element with the ID "loc" */
 #loc {
-  font-weight: bold;
-  font-size: 16px;
+  font-weight: bold; /* Sets font weight to bold */
+  font-size: 16px; /* Sets font size to 16 pixels */
 }
 
+/* Styles for the footer element */
 footer {
-  margin-left: 135px;
-  bottom: 0;
-  position: relative;
-  width: 100%;
-  text-align: center;
-  padding: 20px;
-  margin-bottom: 5px;
+  margin-left: 135px; /* Adds left margin */
+  bottom: 0; /* Positions the element at the bottom */
+  position: relative; /* Sets the element as a relative positioned element */
+  width: 100%; /* Sets width to 100% */
+  text-align: center; /* Aligns the content to the center */
+  padding: 20px; /* Adds padding around the content */
+  margin-bottom: 5px; /* Adds bottom margin */
 }
 
-
+/* Styles for the content within the footer */
 .footer-content {
-  font-family: monospace;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  font-family: monospace; /* Sets font family */
+  display: flex; /* Displays the element as a flex container */
+  flex-direction: column; /* Sets the flex direction to column */
+  justify-content: center; /* Aligns the content vertically at the center */
+  align-items: center; /* Aligns the content horizontally at the center */
 }
 
+/* Styles for images within the footer content */
 .footer-content img {
-  height: 150px;
-  left: 50%;
+  height: 150px; /* Sets height to 150 pixels */
+  left: 50%; /* Positions the element horizontally at 50% from the left */
 }
 
+/* Styles for anchor elements within the .fimgs section */
 .fimgs a {
-  text-decoration: none;
+  text-decoration: none; /* Removes underline */
 }
 
+/* Styles for paragraph elements within the footer content */
 .footer-content p {
-  margin: 0;
-  font-size: 14px;
+  margin: 0; /* Resets margin */
+  font-size: 14px; /* Sets font size to 14 pixels */
 }
 
+/* Styles for images within the .fimgs section */
 .fimgs img {
-  width: 35px;
-  margin-top: 25px;
-  margin-right: 14px;
-  margin-left: 14px;
-  transition: transform 0.3s ease;
+  width: 35px; /* Sets width to 35 pixels */
+  margin-top: 25px; /* Adds top margin */
+  margin-right: 14px; /* Adds right margin */
+  margin-left: 14px; /* Adds left margin */
+  transition: transform 0.3s ease; /* Adds a transition effect */
 }
 
+/* Styles for images within the .fimgs section on hover */
 .fimgs img:hover {
-  transform: scale(1.2);
+  transform: scale(1.2); /* Scales the image on hover */
 }
 
-
-
-
-
-
-
-/* Style the Image Used to Trigger the Modal */
+/* Styles for the image used to trigger the modal */
 #img {
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
+  border-radius: 5px; /* Adds border radius */
+  cursor: pointer; /* Changes cursor to a pointer */
+  transition: 0.3s; /* Adds a transition effect */
 }
 
-#img:hover {opacity: 0.7;}
+/* Styles for the image on hover */
+#img:hover {
+  opacity: 0.7; /* Sets opacity to 0.7 on hover */
+}
 
-/* The Modal (background) */
+/* Styles for the modal */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-bottom: 100px;
-  left: 0;
-  top: 0;
+  z-index: 2; /* Sit on top */
+  padding-bottom: 100px; /* Adds bottom padding */
+  left: 0; /* Positions the element at the left */
+  top: 0; /* Positions the element at the top */
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  background-color: rgba(0,0,0,0.9); /* Black with opacity */
 }
 
-/* Modal Content (Image) */
+/* Styles for the modal content (image) */
 .modal-content {
-  margin: auto;
-  display: block;
+  margin: auto; /* Centers the element horizontally */
+  display: block; /* Displays the element as a block */
   max-width: 100vw; /* Set max width to 90% of viewport width */
   max-height: 100vh; /* Set max height to 90% of viewport height */
   width: auto; /* Maintain aspect ratio */
   height: auto; /* Maintain aspect ratio */
 }
 
-/* Add Animation - Zoom in the Modal */
+/* Add animation - Zoom in the modal */
 .modal-content, #caption {
-  animation-name: zoom;
-  animation-duration: 0.6s;
+  animation-name: zoom; /* Specifies the animation name */
+  animation-duration: 0.6s; /* Sets the animation duration */
 }
 
 @keyframes zoom {
-  from {transform:scale(0)}
-  to {transform:scale(1)}
+  from {
+    transform: scale(0); /* Starts with scale of 0 */
+  }
+  to {
+    transform: scale(1); /* Ends with scale of 1 */
+  }
 }
 
 
+/* Styles for the image grid container */
 .image-grid {
-  padding-top: 25px;
-  padding-left: 320px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  padding-top: 25px; /* Adds top padding */
+  padding-left: 320px; /* Adds left padding */
+  display: flex; /* Displays the container as a flex container */
+  flex-wrap: wrap; /* Allows the items to wrap to the next line */
+  justify-content: center; /* Aligns the items horizontally at the center */
 }
 
+/* Styles for the images within the image grid on hover */
 .image-grid img:hover {
-  opacity: 0.7;
+  opacity: 0.7; /* Sets opacity to 0.7 on hover */
 }
 
-.image-grid div{
-  margin-bottom: 20px;
+/* Styles for the div elements within the image grid */
+.image-grid div {
+  margin-bottom: 20px; /* Adds bottom margin */
 }
 
+/* Styles for the images within the first row */
 .row1 img {
-  margin-left: 10px;
-  margin-right: 10px;
-  width: calc(33.3333% - 25px);
-  max-width: 100%;
-  height: auto;
-  cursor: pointer;
-  transition: 0.3s;
+  margin-left: 10px; /* Adds left margin */
+  margin-right: 10px; /* Adds right margin */
+  width: calc(33.3333% - 25px); /* Sets width based on calculation */
+  max-width: 100%; /* Sets maximum width to 100% of parent */
+  height: auto; /* Adjusts height automatically to maintain aspect ratio */
+  cursor: pointer; /* Changes cursor to a pointer */
+  transition: 0.3s; /* Adds a transition effect */
 }
 
+/* Styles for the images within the second row */
 .row2 img {
-  margin-left: 17%;
-  width: 66%;
-  max-width: 100%;
-  height: auto;
-  cursor: pointer;
-  transition: 0.3s;
+  margin-left: 10px; /* Adds left margin */
+  margin-right: 10px; /* Adds right margin */
+  width: calc(100% - 25px); /* Sets width based on calculation */
+  max-width: 100%; /* Sets maximum width to 100% of parent */
+  height: auto; /* Adjusts height automatically to maintain aspect ratio */
+  cursor: pointer; /* Changes cursor to a pointer */
+  transition: 0.3s; /* Adds a transition effect */
 }
 
+/* Styles for the images within the third row */
 .row3 img {
-  margin-left: 10px;
-  margin-right: 10px;
-  width: calc(33.3333% - 27px);
-  max-width: 100%;
-  height: auto;
-  cursor: pointer;
-  transition: 0.3s;
+  margin-left: 10px; /* Adds left margin */
+  margin-right: 10px; /* Adds right margin */
+  width: calc(33.3333% - 27px); /* Sets width based on calculation */
+  max-width: 100%; /* Sets maximum width to 100% of parent */
+  height: auto; /* Adjusts height automatically to maintain aspect ratio */
+  cursor: pointer; /* Changes cursor to a pointer */
+  transition: 0.3s; /* Adds a transition effect */
 }
 
+/* Styles for the images within the fourth row */
 .row4 img {
-  margin-left: 10px;
-  margin-right: 10px;
-  width: calc(33.3333% - 27px);
-  max-width: 100%;
-  height: auto;
-  cursor: pointer;
-  transition: 0.3s;
+  margin-left: 10px; /* Adds left margin */
+  margin-right: 10px; /* Adds right margin */
+  width: calc(33.3333% - 27px); /* Sets width based on calculation */
+  max-width: 100%; /* Sets maximum width to 100% of parent */
+  height: auto; /* Adjusts height automatically to maintain aspect ratio */
+  cursor: pointer; /* Changes cursor to a pointer */
+  transition: 0.3s; /* Adds a transition effect */
 }
 
+/* Styles for the images within the fifth row */
 .row5 img {
-  margin-left: 10px;
-  margin-right: 10px;
-  width: calc(33.3333% - 27px);
-  max-width: 100%;
-  height: auto;
-  cursor: pointer;
-  transition: 0.3s;
+  margin-left: 10px; /* Adds left margin */
+  margin-right: 10px; /* Adds right margin */
+  width: calc(33.3333% - 27px); /* Sets width based on calculation */
+  max-width: 100%; /* Sets maximum width to 100% of parent */
+  height: auto; /* Adjusts height automatically to maintain aspect ratio */
+  cursor: pointer; /* Changes cursor to a pointer */
+  transition: 0.3s; /* Adds a transition effect */
+}
+
+/* Styles for the images within the second row, first column */
+.row2_1 img {
+  margin-left: 10px; /* Adds left margin */
+  margin-right: 10px; /* Adds right margin */
+  width: calc(50% - 27px); /* Sets width based on calculation */
+  max-width: 100%; /* Sets maximum width to 100% of parent */
+  height: auto; /* Adjusts height automatically to maintain aspect ratio */
+  cursor: pointer; /* Changes cursor to a pointer */
+  transition: 0.3s; /* Adds a transition effect */
+}
+
+/* Styles for the images within the second row, second column */
+.row2_2 img {
+  margin-left: 10px; /* Adds left margin */
+  margin-right: 12px; /* Adds right margin */
+  width: calc(100% - 28px); /* Sets width based on calculation */
+  max-width: 100%; /* Sets maximum width to 100% of parent */
+  height: auto; /* Adjusts height automatically to maintain aspect ratio */
+  cursor: pointer; /* Changes cursor to a pointer */
+  transition: 0.3s; /* Adds a transition effect */
+}
+
+/* Styles for the images within the second row, third column */
+.row2_3 img {
+  margin-left: 10px; /* Adds left margin */
+  margin-right: 10px; /* Adds right margin */
+  width: calc(33.3333% - 27px); /* Sets width based on calculation */
+  max-width: 100%; /* Sets maximum width to 100% of parent */
+  height: auto; /* Adjusts height automatically to maintain aspect ratio */
+  cursor: pointer; /* Changes cursor to a pointer */
+  transition: 0.3s; /* Adds a transition effect */
+}
+
+/* Styles for the images within the second row, fourth column */
+.row2_4 img {
+  margin-left: 10px; /* Adds left margin */
+  margin-right: 10px; /* Adds right margin */
+  width: calc(100% - 27px); /* Sets width based on calculation */
+  max-width: 100%; /* Sets maximum width to 100% of parent */
+  height: auto; /* Adjusts height automatically to maintain aspect ratio */
+  cursor: pointer; /* Changes cursor to a pointer */
+  transition: 0.3s; /* Adds a transition effect */
+}
+
+/* Styles for the images within the second row, fifth column */
+.row2_5 img {
+  margin-left: 10px; /* Adds left margin */
+  margin-right: 10px; /* Adds right margin */
+  width: calc(100% - 27px); /* Sets width based on calculation */
+  max-width: 100%; /* Sets maximum width to 100% of parent */
+  height: auto; /* Adjusts height automatically to maintain aspect ratio */
+  cursor: pointer; /* Changes cursor to a pointer */
+  transition: 0.3s; /* Adds a transition effect */
+}
+
+/* Styles for the loading state of modal images */
+.modal-image.loading {
+  background-color: #f4f4f4; /* Sets the background color or loading animation */
+}
+
+/* Styles for the images within the third row */
+.row3 img {
+  margin-left: 10px; /* Adds left margin */
+  margin-right: 10px; /* Adds right margin */
+  width: calc(33.3333% - 27px); /* Sets width based on calculation */
+  max-width: 100%; /* Sets maximum width to 100% of parent */
+  height: auto; /* Adjusts height automatically to maintain aspect ratio */
+  cursor: pointer; /* Changes cursor to a pointer */
+  transition: 0.3s; /* Adds a transition effect */
+}
+
+/* Styles for the images within the first column of the fourth row */
+.row4_1 img {
+  margin-left: 10px; /* Adds left margin */
+  margin-right: 10px; /* Adds right margin */
+  width: calc(33.3333% - 27px); /* Sets width based on calculation */
+  max-width: 100%; /* Sets maximum width to 100% of parent */
+  height: auto; /* Adjusts height automatically to maintain aspect ratio */
+  cursor: pointer; /* Changes cursor to a pointer */
+  transition: 0.3s; /* Adds a transition effect */
+}
+
+/* Styles for the images within the second column of the fourth row */
+.row4_2 img {
+  margin-left: 10px; /* Adds left margin */
+  margin-right: 10px; /* Adds right margin */
+  width: calc(50% - 27px); /* Sets width based on calculation */
+  max-width: 100%; /* Sets maximum width to 100% of parent */
+  height: auto; /* Adjusts height automatically to maintain aspect ratio */
+  cursor: pointer; /* Changes cursor to a pointer */
+  transition: 0.3s; /* Adds a transition effect */
+}
+
+/* Styles for the images within the third column of the fourth row */
+.row4_3 img {
+  margin-left: 10px; /* Adds left margin */
+  margin-right: 10px; /* Adds right margin */
+  width: calc(33.3333% - 27px); /* Sets width based on calculation */
+  max-width: 100%; /* Sets maximum width to 100% of parent */
+  height: auto; /* Adjusts height automatically to maintain aspect ratio */
+  cursor: pointer; /* Changes cursor to a pointer */
+  transition: 0.3s; /* Adds a transition effect */
+}
+
+/* Styles for the images within the first column of the fifth row */
+.row5_1 img {
+  margin-left: 10px; /* Adds left margin */
+  margin-right: 10px; /* Adds right margin */
+  width: calc(100% - 27px); /* Sets width based on calculation */
+  max-width: 100%; /* Sets maximum width to 100% of parent */
+  height: auto; /* Adjusts height automatically to maintain aspect ratio */
+  cursor: pointer; /* Changes cursor to a pointer */
+  transition: 0.3s; /* Adds a transition effect */
+}
+
+/* Styles for the images within the second column of the fifth row */
+.row5_2 img {
+  margin-left: 10px; /* Adds left margin */
+  margin-right: 10px; /* Adds right margin */
+  width: calc(100% - 27px); /* Sets width based on calculation */
+  max-width: 100%; /* Sets maximum width to 100% of parent */
+  height: auto; /* Adjusts height automatically to maintain aspect ratio */
+  cursor: pointer; /* Changes cursor to a pointer */
+  transition: 0.3s; /* Adds a transition effect */
+}
+
+/* Styles for the images within the third column of the fifth row */
+.row5_3 img {
+  margin-left: 10px; /* Adds left margin */
+  margin-right: 10px; /* Adds right margin */
+  width: calc(100% - 27px); /* Sets width based on calculation */
+  max-width: 100%; /* Sets maximum width to 100% of parent */
+  height: auto; /* Adjusts height automatically to maintain aspect ratio */
+  cursor: pointer; /* Changes cursor to a pointer */
+  transition: 0.3s; /* Adds a transition effect */
 }
